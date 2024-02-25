@@ -7,7 +7,7 @@ import { Task } from '../Task.model';
   styleUrls: ['./add-task.component.css'],
 })
 export class AddTaskComponent {
-  newTask: Task = new Task('', '', '', false); // Cria uma nova instância de Task
+  newTask: Task = new Task('', '', '', '', false); // Cria uma nova instância de Task
 
   @Output() taskAdded = new EventEmitter<Task>(); // Cria um evento para adicionar uma task
 
@@ -15,7 +15,7 @@ export class AddTaskComponent {
   addTask(): void {
     if (this.isValidTask()) {
       this.taskAdded.emit(this.newTask);
-      this.newTask = new Task('', '', '', false); // Limpar os campos após adicionar
+      this.newTask = new Task('', '', '', '', false); // Limpar os campos após adicionar
     }
   }
 
@@ -24,7 +24,8 @@ export class AddTaskComponent {
     return (
       this.newTask.name.trim() !== '' &&
       this.newTask.description.trim() !== '' &&
-      this.newTask.date.trim() !== ''
+      this.newTask.date.trim() !== '' &&
+      this.newTask.time.trim() !== ''
     );
   }
 }

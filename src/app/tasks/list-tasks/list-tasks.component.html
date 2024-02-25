@@ -21,6 +21,9 @@
               {{ task.date | date : "dd-MM-yyyy" }}
             </div>
             <div class="listTasksContentBodyItemBox">
+              {{ task.time }}
+            </div>
+            <div class="listTasksContentBodyItemBox">
               <input
                 type="checkbox"
                 [(ngModel)]="task.completed"
@@ -43,6 +46,9 @@
             </div>
             <div class="listTasksContentBodyItemBoxEdit">
               <input type="date" id="editData" [(ngModel)]="task.date" />
+            </div>
+            <div class="listTasksContentBodyItemBoxEdit">
+              <input type="time" id="editData" [(ngModel)]="task.time" />
             </div>
             <button class="saveEditButton" (click)="saveEditing(i)">
               Concluir

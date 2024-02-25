@@ -16,6 +16,9 @@
         <input type="date" id="data" [(ngModel)]="newTask.date" />
       </div>
       <div class="form-group">
+        <input type="time" id="hora" [(ngModel)]="newTask.time" />
+      </div>
+      <div class="form-group">
         <input type="checkbox" id="completed" [(ngModel)]="newTask.completed" />
       </div>
       <button (click)="addTask()">Adicionar tarefa</button>
