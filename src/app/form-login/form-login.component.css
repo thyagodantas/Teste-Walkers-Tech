@@ -14,6 +14,11 @@
   border-radius: 5px;
 }
 
+.formContainer form a {
+  text-decoration: none;
+  color: #26a69a;
+}
+
 input[type="email"],
 input[type="password"] {
   width: 100%;
