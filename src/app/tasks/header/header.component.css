@@ -17,6 +17,15 @@
   padding: 0 60px;
 }
 
+.logo p {
+  font-size: 24px;
+  font-weight: 700;
+}
+
 .inform {
   padding-right: 60px;
+}
+
+.inform p {
+  font-size: 18px;
 }

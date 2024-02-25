@@ -12,10 +12,12 @@ export class FormCadastroComponent {
   mensagem: string = '';
 
   constructor(private fb: FormBuilder, private authService: AuthService) {
+    // Injeta o AuthService
     this.userForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      // Cria um FormGroup com os campos do formulário
+      name: ['', Validators.required], // O campo name é obrigatório
+      email: ['', [Validators.required, Validators.email]], // O campo email é obrigatório e deve ser um email válido
+      password: ['', [Validators.required, Validators.minLength(6)]], // O campo password é obrigatório e deve ter no mínimo 6 caracteres
     });
   }
 

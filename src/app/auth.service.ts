@@ -22,7 +22,6 @@ export class AuthService {
   cadastrarUsuario(usuario: User): boolean {
     // Verifica se o campo 'name' está vazio ou contém apenas espaços em branco
     if (!usuario || !usuario.name || !usuario.name.trim()) {
-      console.error('Nome do usuário inválido:', usuario.name);
       return false; // Nome do usuário inválido
     }
 
