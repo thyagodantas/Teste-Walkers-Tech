@@ -1,0 +1,36 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formContainer form {
+  width: 100%;
+  max-width: 400px;
+  padding: 25px;
+  border: 1px solid #e1e1e1;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #26a69a;
+  color: #fff;
+  cursor: pointer;
+}

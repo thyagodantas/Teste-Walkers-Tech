@@ -1,0 +1,22 @@
+/* Header */
+.header {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.headerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 0 60px;
+}
+
+.inform {
+  padding-right: 60px;
+}

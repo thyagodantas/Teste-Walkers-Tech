@@ -1,0 +1,21 @@
+<div class="formContainer">
+  <form [formGroup]="userForm" (ngSubmit)="cadastrar()">
+    <p>{{ mensagem }}</p>
+    <input type="text" id="name" formControlName="name" placeholder="Nome" />
+    <input
+      type="email"
+      id="email"
+      formControlName="email"
+      placeholder="Email"
+    />
+    <input
+      type="password"
+      id="password"
+      formControlName="password"
+      placeholder="Senha"
+    />
+
+    <input type="submit" value="Cadastrar" />
+    <a routerLink="/">Voltar ao login</a>
+  </form>
+</div>

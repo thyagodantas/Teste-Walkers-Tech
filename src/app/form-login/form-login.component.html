@@ -1,0 +1,20 @@
+<div class="formContainer">
+  <form [formGroup]="authService.loginForm" (ngSubmit)="fazerLogin()">
+    <p>{{ mensagem }}</p>
+    <input
+      type="email"
+      id="email"
+      formControlName="email"
+      placeholder="Login"
+    />
+    <input
+      type="password"
+      id="password"
+      formControlName="password"
+      placeholder="Senha"
+    />
+
+    <input type="submit" value="Fazer login" />
+    <a routerLink="/cadastro">Cadastro</a>
+  </form>
+</div>

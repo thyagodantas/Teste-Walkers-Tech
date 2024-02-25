@@ -1,0 +1,58 @@
+<!-- AddTaskComponent -->
+<app-add-task (taskAdded)="addTask($event)"></app-add-task>
+<!-- ListTasksComponent -->
+<div class="listTasks">
+  <div class="listTasksContainer">
+    <div class="listTasksContentBody">
+      <div *ngFor="let task of tasks; let i = index">
+        <div
+          class="listTasksContentBodyItem"
+          [ngClass]="{
+            listTasksContentBodyItemBox: !isEditing(i),
+            listTasksContentBodyItemBoxEdit: isEditing(i)
+          }"
+        >
+          <div class="EditTaskBox" *ngIf="!isEditing(i)">
+            <div class="listTasksContentBodyItemBox">{{ task.name }}</div>
+            <div class="listTasksContentBodyItemBox">
+              {{ task.description }}
+            </div>
+            <div class="listTasksContentBodyItemBox">
+              {{ task.date | date : "dd-MM-yyyy" }}
+            </div>
+            <div class="listTasksContentBodyItemBox">
+              <input
+                type="checkbox"
+                [(ngModel)]="task.completed"
+                (change)="toggleTaskCompletion(i)"
+              />
+              <button class="editButton" (click)="startEditing(i)">
+                Editar
+              </button>
+              <button class="removeButton" (click)="removeTask(i)">
+                Remover
+              </button>
+            </div>
+          </div>
+          <div class="EditTaskBox" *ngIf="isEditing(i)">
+            <div class="listTasksContentBodyItemBoxEdit">
+              <input id="editNome" [(ngModel)]="task.name" />
+            </div>
+            <div class="listTasksContentBodyItemBoxEdit">
+              <input id="editDescricao" [(ngModel)]="task.description" />
+            </div>
+            <div class="listTasksContentBodyItemBoxEdit">
+              <input type="date" id="editData" [(ngModel)]="task.date" />
+            </div>
+            <button class="saveEditButton" (click)="saveEditing(i)">
+              Concluir
+            </button>
+            <button class="removeButton" (click)="cancelEditing()">
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

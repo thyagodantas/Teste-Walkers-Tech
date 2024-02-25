@@ -1,0 +1,119 @@
+/* List Tasks */
+.listTasks {
+  margin-top: 20px;
+}
+
+.listTasksContainer {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.listTasksContentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.listTasksContentBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 0 50px;
+  margin-bottom: 20px;
+}
+
+.listTasksContentBodyItem {
+  display: flex;
+  width: 100%;
+  padding: 20px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f2f2f2;
+}
+
+.listTasksContentBodyItemBox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.listTasksContentBodyItemBoxEdit {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.listTasksContentBodyItemBoxEdit input {
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.listTasksContentBodyItem p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.removeButton {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4d4d;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.saveEditButton {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #008b1c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.editButton {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(217, 229, 0);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.EditTaskBox {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
